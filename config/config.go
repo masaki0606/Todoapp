@@ -30,5 +30,4 @@ func LoadConfig() {
 		DbName:    cfg.Section("db").Key("name").String(),
 		LogFile:   cfg.Section("web").Key("logfile").String(),
 	}
-
 }
