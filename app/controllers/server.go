@@ -14,7 +14,7 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 	}
 
 	templates := template.Must(template.ParseFiles(files...))
-	templates.ExecuteTemplate(w, "layout",data)
+	templates.ExecuteTemplate(w, "layout", data)
 }
 
 func StartMainServer() error {
@@ -22,5 +22,6 @@ func StartMainServer() error {
 	http.Handle("/static/", http.StripPrefix("/static/", files))
 
 	http.HandleFunc("/", top)
+	http.HandleFunc("/signup", signup)
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }
