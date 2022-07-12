@@ -46,7 +46,7 @@ func GetTodos() (todos []Todo, err error) {
 	return todos, err
 }
 
-func (u *User) GetTodosByUser(id int) (todos []Todo, err error) {
+func (u *User) GetTodosByUser() (todos []Todo, err error) {
 	cmd := `select id,content,user_id,created_at from todos where user_id = ?`
 	rows, err := Db.Query(cmd, u.ID)
 	if err != nil {

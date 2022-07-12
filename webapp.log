@@ -1126,3 +1126,9 @@ net/http.(*conn).serve(0x14000178640, {0x1050d75d8, 0x1400009b590})
 	/usr/local/go/src/net/http/server.go:1966 +0x56c
 created by net/http.(*Server).Serve
 	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/07/12 15:22:49 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/12 15:22:49 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/12 15:22:52 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/12 15:22:52 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/12 15:22:53 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/12 15:22:53 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
