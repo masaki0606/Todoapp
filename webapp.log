@@ -1132,3 +1132,10 @@ created by net/http.(*Server).Serve
 2022/07/12 15:22:52 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
 2022/07/12 15:22:53 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
 2022/07/12 15:22:53 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 09:16:00 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 09:16:00 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 09:16:01 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 09:16:02 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 09:16:02 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 09:16:02 route_main.go:27: sql: expected 5 destination arguments in Scan, not 6
+2022/07/13 23:08:21 route_main.go:22: http: named cookie not present

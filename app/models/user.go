@@ -89,11 +89,18 @@ func (u *User) CreateSession() (session Session, err error) {
 
 	_, err = Db.Exec(cmd1, createUUID(), u.Email, u.ID, time.Now())
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 
-	cmd2 := `select id,uuid,email,user_id,created_at from sessions where user_id = ? and email = ?`
-	err = Db.QueryRow(cmd2, u.ID, u.Email).Scan(&session.ID, &session.UUID, &session.Email, &session.UserID, &session.CreatedAt)
+	cmd2 := `select id, uuid, email, user_id, created_at
+	from sessions where user_id = ? and email = ?`
+
+	err = Db.QueryRow(cmd2, u.ID, u.Email).Scan(
+		&session.ID,
+		&session.UUID,
+		&session.Email,
+		&session.UserID,
+		&session.CreatedAt)
 
 	return session, err
 }
@@ -132,7 +139,14 @@ func (sess *Session) DeleteSessionByUUID() (err error) {
 
 func (sess *Session) GetUserBySession() (user User, err error) {
 	user = User{}
-	cmd := `select id,uuid,name,email,created_at from users where id = ?`
-	err = Db.QueryRow(cmd, sess.UserID).Scan(&user.ID, &user.UUID, &user.Name, &user.Name, &user.Email, &user.CreatedAt)
+	cmd := `select id, uuid, name, email, created_at FROM users
+	where id = ?`
+	err = Db.QueryRow(cmd, sess.UserID).Scan(
+		&user.ID,
+		&user.UUID,
+		&user.Name,
+		&user.Email,
+		&user.CreatedAt)
+
 	return user, err
 }
